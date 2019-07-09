@@ -1,14 +1,14 @@
 const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-
 module.exports = {
-    mode: 'production',
     entry: {
-        index: './lib/index.tsx' 
+        index: './lib/index.tsx'
+    },
+    resolve: {
+        extensions: ['.ts', '.tsx', '.js', '.jsx'],
     },
     output: {
         path: path.resolve(__dirname, 'dist/lib'),
-        library: 'ych-ui',
+        library: 'FUI',
         libraryTarget: 'umd',
     },
     module: {
@@ -19,10 +19,4 @@ module.exports = {
             }
         ]
     },
-    plugins: [
-        new HtmlWebpackPlugin({
-            title: 'ych-ui',
-            template: 'index.html'
-        })
-    ]
 }
