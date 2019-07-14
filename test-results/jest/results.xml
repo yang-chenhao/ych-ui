@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="8" failures="0" time="5.758">
+  <testsuite name="我的第一个测试用例" errors="0" failures="0" skipped="0" timestamp="2019-07-14T13:45:37" time="1.427" tests="1">
+    <testcase classname="我的第一个测试用例 add(1,2) 等于3" name="我的第一个测试用例 add(1,2) 等于3" time="0.005">
+    </testcase>
+  </testsuite>
+  <testsuite name="classes" errors="0" failures="0" skipped="0" timestamp="2019-07-14T13:45:37" time="2.165" tests="5">
+    <testcase classname="classes 接受 1 个 className" name="classes 接受 1 个 className" time="0.004">
+    </testcase>
+    <testcase classname="classes 接受 2 个 className" name="classes 接受 2 个 className" time="0">
+    </testcase>
+    <testcase classname="classes 接受 undefined 结果不会出现 undefined" name="classes 接受 undefined 结果不会出现 undefined" time="0.001">
+    </testcase>
+    <testcase classname="classes 接受各种奇怪值" name="classes 接受各种奇怪值" time="0">
+    </testcase>
+    <testcase classname="classes 接受 0 个参数" name="classes 接受 0 个参数" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="icon" errors="0" failures="0" skipped="0" timestamp="2019-07-14T13:45:37" time="2.222" tests="2">
+    <testcase classname="icon render successfully" name="icon render successfully" time="0.012">
+    </testcase>
+    <testcase classname="icon onClick" name="icon onClick" time="0.033">
+    </testcase>
+  </testsuite>
+</testsuites>
