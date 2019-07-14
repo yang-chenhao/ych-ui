@@ -1,21 +1,3 @@
-Skip to content
- 
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@yang-chenhao 
-0
-2 2 FrankFang/frank-test-5
- Code  Issues 0  Pull requests 0  Projects 0  Wiki  Security  Insights
-frank-test-5/.circleci/config.yml
-@FrankFang FrankFang add ci config
-d446380 on 24 Mar
-76 lines (71 sloc)  1.53 KB
-    
 #https://github.com/revolunet/create-react-app-circleci/blob/master/.circleci/config.yml
 defaults: &defaults
   docker:
@@ -91,15 +73,3 @@ workflows:
               only: /^v[0-9]+(\.[0-9]+)*/
             branches:
               ignore: /.*/
-© 2019 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
