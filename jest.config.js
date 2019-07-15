@@ -3,7 +3,7 @@
 module.exports = {
   verbose: true,
   clearMocks: false,
-  reporters: ["default", 'jest-junit'],
+  reporters: ["default"],
 
   collectCoverage: false,
 
