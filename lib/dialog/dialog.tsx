@@ -6,9 +6,9 @@ import ReactDOM from 'react-dom';
 
 interface Props {
     visible: boolean,
-    buttons: Array<ReactElement>,
+    buttons?: Array<ReactElement>,
     onClose: React.MouseEventHandler,
-    closeOnClickMask?: boolean,   
+    closeOnClickMask?: boolean,
 }
 
 const scopedClass = scopedClassMaker('yui-dialog')
@@ -22,27 +22,27 @@ const Dialog: React.FunctionComponent<Props> = (props) => {
         }
     }
     const x = props.visible ?
-    <Fragment>
-        <div className={sc('mask')} onClick={onClickMask}>
-        </div>
-        <div className={sc()}>
-            <div className={sc('close')}>
-                <Icon name='close' onClick={onClickClose} />
+        <Fragment>
+            <div className={sc('mask')} onClick={onClickMask}>
             </div>
-            <header className={sc('header')}>
-                提示
-            </header>
-            <main className={sc('main')}>
-                {props.children}
-            </main>
-            <footer className={sc('footer')}>
-                {props.buttons.map((button, index) =>
-                    React.cloneElement(button, { key: index })
-                )}
-            </footer>
-        </div>
-    </Fragment> :
-    null
+            <div className={sc()}>
+                <div className={sc('close')}>
+                    <Icon name='close' onClick={onClickClose} />
+                </div>
+                <header className={sc('header')}>
+                    提示
+                </header>
+                <main className={sc('main')}>
+                    {props.children}
+                </main>
+                <footer className={sc('footer')}>
+                    {props.buttons && props.buttons.map((button, index) =>
+                        React.cloneElement(button, { key: index })
+                    )}
+                </footer>
+            </div>
+        </Fragment> :
+        null
     return (
         ReactDOM.createPortal(x, document.body)
     )
@@ -52,4 +52,16 @@ Dialog.defaultProps = {
     closeOnClickMask: false
 }
 
+const alert = (content: string) => {
+    const component = <Dialog visible={true} onClose={() => {
+        ReactDOM.render(React.cloneElement(component, { visible: false }), div)
+        ReactDOM.unmountComponentAtNode(div)
+        div.remove()
+    }}>{content}</Dialog>
+    const div = document.createElement('div')
+    document.body.append(div)
+    ReactDOM.render(component, div)
+}
+
+export { alert }
 export default Dialog
