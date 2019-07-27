@@ -1,8 +1,13 @@
 import React, { useState } from 'react'
-import Dialog, { alert, confirm } from './dialog'
+import Dialog, { alert, confirm, modal } from './dialog'
 
 export default function () {
     const [x, setX] = useState(false)
+    const openModal = () => {
+        const close = modal(<h1>你好
+            <button onClick={() => close()}>close</button>
+        </h1>)
+    }
     return (
         <div>
             <div>
@@ -27,6 +32,10 @@ export default function () {
                 }, () => {
                     console.log('no')
                 })}>confirm</button>
+            </div>
+            <div>
+                <h1>example4</h1>
+                <button onClick={() => openModal()}>modal</button>
             </div>
         </div>
     )
