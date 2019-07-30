@@ -2,10 +2,13 @@ import React from 'react'
 import { scopedClassMaker } from '../classes';
 
 const sc = scopedClassMaker('yui-layout')
+interface Props extends React.HTMLAttributes<HTMLElement> {
+}
 
-const Content: React.FunctionComponent = () => {
+const Content: React.FunctionComponent<Props> = (props) => {
+    const { className, ...rest } = props
     return (
-        <div className={sc('content')}>Content</div>
+        <div className={sc('content', {extra: className})} {...rest}>Content</div>
     )
 }
 
