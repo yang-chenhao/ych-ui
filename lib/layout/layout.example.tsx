@@ -43,6 +43,7 @@ export default function () {
                 <Layout style={{ height: 500 }} className={'hi'}>
                     <Aside>Aside</Aside>
                     <Layout>
+                        <Header>Header</Header>
                         <Content>Content</Content>
                         <Footer>Footer</Footer>
                     </Layout>
