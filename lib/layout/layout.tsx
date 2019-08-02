@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react'
-import { scopedClassMaker } from '../classes'
 import './layout.scss'
 import Aside from './aside';
+import { scopedClassMaker } from '../helpers/classes';
 
 const sc = scopedClassMaker('yui-layout')
 interface Props extends React.HTMLAttributes<HTMLElement> {
@@ -11,10 +11,10 @@ interface Props extends React.HTMLAttributes<HTMLElement> {
 const Layout: React.FunctionComponent<Props> = (props) => {
     const { className, ...rest } = props
     const children = props.children as Array<ReactElement> 
-    const hasAside = children.length &&
+    const hasAside = length in children &&
         children.some( node => node.type === Aside)
     return (
-        <div className={sc('', { extra: [className, hasAside && 'hasAside'].join(' ') })}
+        <div className={sc({'': true, hasAside}, { extra: className })}
             {...rest}>
             {props.children}
         </div>
