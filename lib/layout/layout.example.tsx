@@ -1,54 +1,55 @@
 import React from 'react'
-import Layout from './layout';
-import Header from './header';
-import Content from './content';
-import Footer from './footer';
-import Aside from './aside';
+import Layout from './layout'
+import Header from './header'
+import Content from './content'
+import Footer from './footer'
+import Aside from './aside'
+import './layout.example.scss'
 
 export default function () {
     return (
         <div>
             <div>
-                <h1 style={{}}>第一个例子</h1>
-                <Layout style={{ height: 500 }} className={'hi'}>
-                    <Header>Header</Header>
-                    <Content>Content</Content>
-                    <Footer>Footer</Footer>
+                <h1>第一个例子</h1>
+                <Layout style={{ height: 500, width: 500 }} className="hi">
+                    <Header className="x">header</Header>
+                    <Content className="y">content</Content>
+                    <Footer className="x">footer</Footer>
                 </Layout>
             </div>
             <div>
-                <h1 style={{}}>第二个例子</h1>
-                <Layout style={{ height: 500 }} className={'hi'}>
-                    <Header>Header</Header>
+                <h1>第二个例子</h1>
+                <Layout style={{ height: 500, width: 500 }} className="hi">
+                    <Header className="x">header</Header>
                     <Layout>
-                        <Aside>Aside</Aside>
-                        <Content>Content</Content>
+                        <Aside className="z">aside</Aside>
+                        <Content className="y">content</Content>
                     </Layout>
-                    <Footer>Footer</Footer>
+                    <Footer className="x">footer</Footer>
                 </Layout>
             </div>
             <div>
-                <h1 style={{}}>第三个例子</h1>
-                <Layout style={{ height: 500 }} className={'hi'}>
-                    <Header>Header</Header>
+                <h1>第三个例子</h1>
+                <Layout style={{ height: 500, width: 500 }} className="hi">
+                    <Header className="x">header</Header>
                     <Layout>
-                        <Content>Content</Content>
-                        <Aside>Aside</Aside>
+                        <Content className="y">content</Content>
+                        <Aside className="z">aside</Aside>
                     </Layout>
-                    <Footer>Footer</Footer>
+                    <Footer className="x">footer</Footer>
                 </Layout>
             </div>
             <div>
-                <h1 style={{}}>第四个例子</h1>
-                <Layout style={{ height: 500 }} className={'hi'}>
-                    <Aside>Aside</Aside>
+                <h1>第四个例子</h1>
+                <Layout style={{ height: 500, width: 500 }} className="hi">
+                    <Aside className="z">aside</Aside>
                     <Layout>
-                        <Header>Header</Header>
-                        <Content>Content</Content>
-                        <Footer>Footer</Footer>
+                        <Header className="x">header</Header>
+                        <Content className="y">content</Content>
+                        <Footer className="x">footer</Footer>
                     </Layout>
                 </Layout>
             </div>
         </div>
-    )
+    );
 }
