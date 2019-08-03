@@ -1,22 +1,28 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {HashRouter as Router, Route, Link} from 'react-router-dom'
+import { HashRouter as Router, Route, Link } from 'react-router-dom'
 import IconExample from './lib/icon/icon.example'
 import DialogExample from './lib/dialog/dialog.example'
 import ButtonExample from './lib/button.example'
 import LayoutExample from './lib/layout/layout.example'
+import { Layout, Header, Aside, Content, Footer } from './lib/layout/layout'
+import './example.scss'
+
+const logo = require('./logo.png')
 
 ReactDOM.render(
   <Router>
-    <div>
-      <header>
+    <Layout className='site-page'>
+      <Header className='site-header'>
         <div className="logo">
+          <img src={logo} alt='' width='48' height='48'/>
+          <span>
           Y-UI
+          </span>
         </div>
-
-      </header>
-      <div>
-        <aside>
+      </Header>
+      <Layout>
+        <Aside className='site-aside'>
           <h2>组件</h2>
           <ul>
             <li>
@@ -25,21 +31,24 @@ ReactDOM.render(
             <li>
               <Link to="/button">Button</Link>
             </li>
-             <li>
+            <li>
               <Link to="/dialog">对话框</Link>
             </li>
-             <li>
+            <li>
               <Link to="/layout">布局</Link>
             </li>
           </ul>
-        </aside>
-        <main>
-          <Route path="/icon" component={IconExample}/>
-          <Route path="/button" component={ButtonExample}/>
-          <Route path="/dialog" component={DialogExample}/>
-          <Route path="/layout" component={LayoutExample}/>
-        </main>
-      </div>
-    </div>
+        </Aside>
+        <Content className='site-main'>
+          <Route path="/icon" component={IconExample} />
+          <Route path="/button" component={ButtonExample} />
+          <Route path="/dialog" component={DialogExample} />
+          <Route path="/layout" component={LayoutExample} />
+        </Content>
+      </Layout>
+      <Footer className='site-footer'>
+      &copy; yangchenhao
+      </Footer>
+    </Layout>
   </Router>
   , document.querySelector('#root'));
