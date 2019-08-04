@@ -43,7 +43,7 @@ ReactDOM.render(
         </Content>
       </Layout>
       <Footer className="site-footer">
-        &copy; 方应杭
+        &copy; yangchenhao 
       </Footer>
     </Layout>
   </Router>
