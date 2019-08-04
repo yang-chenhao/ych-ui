@@ -4,9 +4,13 @@
   "description": "",
   "main": "dist/lib/index",
   "types": "dist/lib/index",
+  "files": [
+    "/dist/**/*"
+  ],
   "scripts": {
     "test": "cross-env NODE_ENV=test jest --config=jest.config.js --runInBand",
     "start": "cross-env NODE_ENV=development webpack-dev-server --config webpack.config.dev.js",
+    "doc": "cross-env NODE_ENV=production webpack --config webpack.config.doc.js",
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
     "ci": "cross-env NODE_ENV=test JEST_JUNIT_OUTPUT=./test-results/jest/results.xml jest --config=jest.config.ci.js"
   },
@@ -17,9 +21,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "files": [
-    "/dist"
-  ],
   "bugs": {
     "url": "https://github.com/yang-chenhao/ych-ui/issues"
   },
