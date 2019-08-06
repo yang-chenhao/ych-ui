@@ -4,6 +4,7 @@ import {HashRouter as Router, Route, NavLink} from 'react-router-dom';
 import DialogExample from './lib/dialog/dialog.example';
 import ButtonExample from './lib/button.example';
 import LayoutExample from './lib/layout/layout.example';
+import FormExample from './lib/form/form.example';
 import {Layout, Aside, Header, Content, Footer} from './lib/layout/layout';
 import './example.scss';
 import IconDemo from './lib/icon/icon.demo';
@@ -17,7 +18,7 @@ ReactDOM.render(
       <Header className="site-header">
         <div className="logo">
           <img src={logo} width="48" height="48" alt=""/>
-          <span> FUI </span>
+          <span> YUI </span>
         </div>
       </Header>
       <Layout>
@@ -33,6 +34,9 @@ ReactDOM.render(
             <li>
               <NavLink to="/layout">布局</NavLink>
             </li>
+            <li>
+              <NavLink to="/form">表单</NavLink>
+            </li>
           </ul>
         </Aside>
         <Content className="site-main">
@@ -40,6 +44,7 @@ ReactDOM.render(
           <Route path="/button" component={ButtonExample}/>
           <Route path="/dialog" component={DialogExample}/>
           <Route path="/layout" component={LayoutExample}/>
+          <Route path="/form" component={FormExample}/>
         </Content>
       </Layout>
       <Footer className="site-footer">
