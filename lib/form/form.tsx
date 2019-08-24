@@ -13,6 +13,7 @@ interface Props {
     onSubmit: React.FormEventHandler,
     onChange: (value: FormValue) => void,
     errors: { [K: string]: string[] },
+    errorsDisplayMode?: 'first' | 'all',
 }
 
 const Form: React.FunctionComponent<Props> = (props) => {
@@ -26,12 +27,12 @@ const Form: React.FunctionComponent<Props> = (props) => {
         props.onChange(newFormData)
     }
     return <form onSubmit={onSubmit}>
-        <table>
+        <table className={'yui-form-table'}>
             <tbody>
                 {props.fields.map(field =>
                     <tr className={classes('yui-form-tr')} key={field.name}>
                         <td className={'yui-form-td'}>
-                            <span>
+                            <span className={'yui-form-label'}>
                                 {field.label}
                             </span>
                         </td>
@@ -41,7 +42,14 @@ const Form: React.FunctionComponent<Props> = (props) => {
                                 value={formData[field.name]}
                                 onChange={(e) => onInputChange(field.name, e.target.value)}
                             />
-                            <div>{props.errors[field.name]}</div>
+                            <div className={'yui-form-error'}>
+                                {props.errors[field.name] ?
+                                    (props.errorsDisplayMode === 'first' ?
+                                        props.errors[field.name][0] :
+                                        props.errors[field.name].join(','))
+                                    :
+                                    <span>&nbsp;</span>
+                                }</div>
                         </td>
                     </tr>
                 )}
@@ -54,6 +62,10 @@ const Form: React.FunctionComponent<Props> = (props) => {
             </tbody>
         </table>
     </form>
+}
+
+Form.defaultProps = {
+    errorsDisplayMode: 'first'
 }
 
 export default Form
