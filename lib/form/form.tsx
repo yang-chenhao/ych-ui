@@ -14,6 +14,7 @@ interface Props {
     onChange: (value: FormValue) => void,
     errors: { [K: string]: string[] },
     errorsDisplayMode?: 'first' | 'all',
+    transformError?: (message: string) => string,
 }
 
 const Form: React.FunctionComponent<Props> = (props) => {
@@ -25,6 +26,14 @@ const Form: React.FunctionComponent<Props> = (props) => {
     const onInputChange = (name: string, value: string) => {
         const newFormData = { ...formData, [name]: value }
         props.onChange(newFormData)
+    }
+    const transformError = (message: string) => {
+        const map: any = {
+            required: '必填',
+            minLength: '太短',
+            maxLength: '太长',
+        }
+        return props.transformError && props.transformError(message) || map[message] || '未知错误'
     }
     return <form onSubmit={onSubmit}>
         <table className={'yui-form-table'}>
@@ -45,8 +54,8 @@ const Form: React.FunctionComponent<Props> = (props) => {
                             <div className={'yui-form-error'}>
                                 {props.errors[field.name] ?
                                     (props.errorsDisplayMode === 'first' ?
-                                        props.errors[field.name][0] :
-                                        props.errors[field.name].join(','))
+                                        transformError!(props.errors[field.name][0]) :
+                                        props.errors[field.name].map(transformError!).join(','))
                                     :
                                     <span>&nbsp;</span>
                                 }</div>
@@ -65,7 +74,8 @@ const Form: React.FunctionComponent<Props> = (props) => {
 }
 
 Form.defaultProps = {
-    errorsDisplayMode: 'first'
+    errorsDisplayMode: 'first',
+    
 }
 
 export default Form
