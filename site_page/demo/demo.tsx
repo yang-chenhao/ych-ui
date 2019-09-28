@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Highlight, {defaultProps} from "prism-react-renderer";
 import {useState} from 'react';
+import './demo.scss';
 
 interface Props {
   code: string;
@@ -24,8 +25,8 @@ const Demo: React.FunctionComponent<Props> = (props) => {
     </Highlight>
   );
   return (
-    <div>
-      <div className="example">
+    <div className="example">
+      <div className="container">
         {props.children}
       </div>
       <div>

@@ -1,6 +1,6 @@
 import IconExample from './icon.example';
 import React, {Fragment} from 'react';
-import Demo from '../../demo';
+import Demo from '../../site_page/demo/demo';
 
 const IconDemo = () => {
   return (
