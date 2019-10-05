@@ -19,7 +19,7 @@ const IntroPage: React.FunctionComponent = () => {
             <section>
                 <h2>没有额外依赖</h2>
                 <p className='text'>
-                    Xue-react 只依赖 React、ReactDOM 两个核心库，没有其他外部依赖。
+                    Yui-react 只依赖 React、ReactDOM 两个核心库，没有其他外部依赖。
                 </p>
                 </section>
         </div>

@@ -11,4 +11,89 @@
         justify-content: flex-start;
         align-items: center;
     }
+
+    .code-box {
+        position: relative;
+    }
+    
+    .code-title {
+        display: inline-flex;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: #fff;
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.85);
+        position: absolute;
+        top: -11px;
+        left: 32px;
+        line-height: 22px;
+        z-index: 1;
+        padding: 0 8px;
+        cursor: default;
+        border-radius: 4px;
+    }
+    
+    .code-des {
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        padding: 18px 32px;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        color: rgba(0, 0, 0, 0.65);
+        position: relative;
+        font-size: 14px;
+        line-height: 22px;
+        transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+        color: rgba(0, 0, 0, 0.65);
+    }
+    
+    .icon-wrapper {
+        color: rgba(0, 0, 0, 0.45);
+        display: inline-flex;
+        justify-content: center;
+        align-content: center;
+        cursor: pointer;
+        position: absolute;
+        bottom: 18px;
+        right: 12px;
+        svg {
+            height: 20px;
+            width: 20px;
+        }
+    }
+
+    .code-content {
+        transition: height 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, padding-top 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, padding-bottom 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+        padding: 18px 32px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        border-top-width: 0px;
+        border-bottom-width: 0px;
+        display: none;
+        background-color: #282828;
+        color: #d4d4d4;
+        font-size: 16px;
+        line-height: 30px;
+        font-weight: 500;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        // height: 0;
+        // overflow: hidden;
+    }
+
+
+    .code-visible {
+        transition: height 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, padding-top 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, padding-bottom 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+        background-color: #282828;
+        color: #d4d4d4;
+        font-size: 16px;
+        line-height: 30px;
+        font-weight: 500;
+        padding: 18px 32px;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        display: block;
+    }
 }
+

@@ -5,8 +5,8 @@ const IconExample: React.FunctionComponent = () => {
     return (
         <div>
             <Icon name='qq'></Icon>
-            <Icon name='alipay'></Icon>
-            <Icon name='wechat'></Icon>
+            <Icon style={{marginLeft: 8}}  name='alipay'></Icon>
+            <Icon style={{marginLeft: 8}} name='wechat'></Icon>
         </div>
     )
 }
