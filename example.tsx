@@ -8,9 +8,9 @@ import FormExample from './lib/form/form.example';
 import {Layout, Aside, Header, Content, Footer} from './lib/layout/layout';
 import Icon from './lib/icon/icon';
 import './example.scss';
-import IconDemo from './lib/icon/icon.demo';
 import IntroPage from './site_page/introduction/introduction';
 import StartPage from './site_page/start/start';
+import IconPage from './site_page/iconPage/iconPage';
 
 
 const logo = require('./logo.png');
@@ -95,7 +95,7 @@ ReactDOM.render(
         <Content className="site-main">
           <Route path="/index" component={IntroPage}/>
           <Route path="/start" component={StartPage}/>
-          <Route path="/icon" component={IconDemo}/>
+          <Route path="/icon" component={IconPage}/>
           <Route path="/button" component={ButtonExample}/>
           <Route path="/dialog" component={DialogExample}/>
           <Route path="/layout" component={LayoutExample}/>

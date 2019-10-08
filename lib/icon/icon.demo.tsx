@@ -8,7 +8,7 @@ const IconDemo = () => {
       <Demo 
         code={require('!!raw-loader!./icon.example.tsx').default}
         title={'Icon图标'}
-        description={'使用 yui-react 按钮组件。'}
+        description={'使用 yui-react Icon图标。'}
       >
         <IconExample/>
       </Demo>
