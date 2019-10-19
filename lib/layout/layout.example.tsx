@@ -9,44 +9,40 @@ import './layout.example.scss'
 export default function () {
     return (
         <div>
-            <div>
-                <h1>第一个例子</h1>
-                <Layout style={{ height: 500, width: 500 }} className="hi">
-                    <Header className="x">header</Header>
-                    <Content className="y">content</Content>
-                    <Footer className="x">footer</Footer>
+            <div style={{marginBottom: 40}}>
+                <Layout>
+                    <Header><div className='blockH'>header</div></Header>
+                    <Content><div className='blockC'>content</div></Content>
+                    <Footer><div className='blockF'>footer</div></Footer>
                 </Layout>
             </div>
-            <div>
-                <h1>第二个例子</h1>
-                <Layout style={{ height: 500, width: 500 }} className="hi">
-                    <Header className="x">header</Header>
+            <div style={{marginBottom: 40}}>
+                <Layout>
+                    <Header><div className='blockH'>header</div></Header>
                     <Layout>
-                        <Aside className="z">aside</Aside>
-                        <Content className="y">content</Content>
+                        <Aside><div className='blockA'>Aside</div></Aside>
+                        <Content><div className='blockC'>content</div></Content>
                     </Layout>
-                    <Footer className="x">footer</Footer>
+                    <Footer><div className='blockF'>footer</div></Footer>
                 </Layout>
             </div>
-            <div>
-                <h1>第三个例子</h1>
-                <Layout style={{ height: 500, width: 500 }} className="hi">
-                    <Header className="x">header</Header>
+            <div style={{marginBottom: 40}}>
+                <Layout>
+                <Header><div className='blockH'>header</div></Header>
                     <Layout>
-                        <Content className="y">content</Content>
-                        <Aside className="z">aside</Aside>
+                        <Content><div className='blockC'>content</div></Content>
+                        <Aside><div className='blockA'>Aside</div></Aside>
                     </Layout>
-                    <Footer className="x">footer</Footer>
+                    <Footer><div className='blockF'>footer</div></Footer>
                 </Layout>
             </div>
             <div>
-                <h1>第四个例子</h1>
-                <Layout style={{ height: 500, width: 500 }} className="hi">
-                    <Aside className="z">aside</Aside>
+                <Layout>
+                    <Aside><div className='blockA'>Aside</div></Aside>
                     <Layout>
-                        <Header className="x">header</Header>
-                        <Content className="y">content</Content>
-                        <Footer className="x">footer</Footer>
+                        <Header><div className='blockH'>header</div></Header>
+                        <Content><div className='blockC'>content</div></Content>
+                        <Footer><div className='blockF'>footer</div></Footer>
                     </Layout>
                 </Layout>
             </div>

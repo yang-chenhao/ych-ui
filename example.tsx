@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import {HashRouter as Router, Route, NavLink} from 'react-router-dom';
 import DialogExample from './lib/dialog/dialog.example';
 import ButtonExample from './lib/button.example';
-import LayoutExample from './lib/layout/layout.example';
 import FormExample from './lib/form/form.example';
 import {Layout, Aside, Header, Content, Footer} from './lib/layout/layout';
 import Icon from './lib/icon/icon';
@@ -11,6 +10,7 @@ import './example.scss';
 import IntroPage from './site_page/introduction/introduction';
 import StartPage from './site_page/start/start';
 import IconPage from './site_page/iconPage/iconPage';
+import LayoutPage from './site_page/layoutPage/layoutPage';
 
 
 const logo = require('./logo.png');
@@ -52,7 +52,7 @@ ReactDOM.render(
                   <ul>
                     <li>
                       <NavLink className="site-menuitem site-subitem" to="/icon">
-                        Icon 
+                        Icon 图标
                       <div className="site-menuitemend"></div>
                       </NavLink> 
                     </li>
@@ -62,7 +62,7 @@ ReactDOM.render(
                   <div className="site-submenutitle">布局</div>
                   <ul>
                     <li>
-                      <NavLink className="site-menuitem site-subitem" to="/layout">Layout
+                      <NavLink className="site-menuitem site-subitem" to="/layout">Layout 布局
                       <div className="site-menuitemend"></div>
                       </NavLink> 
                     </li>
@@ -72,7 +72,7 @@ ReactDOM.render(
                   <div className="site-submenutitle">信息反馈</div>
                   <ul>
                     <li>
-                      <NavLink className="site-menuitem site-subitem" to="/dialog">Dialog
+                      <NavLink className="site-menuitem site-subitem" to="/dialog">Dialog 对话框
                       <div className="site-menuitemend"></div>
                       </NavLink> 
                     </li>
@@ -82,7 +82,7 @@ ReactDOM.render(
                   <div className="site-submenutitle">数据录入</div>
                   <ul>
                     <li>
-                      <NavLink className="site-menuitem site-subitem" to="/form">Form
+                      <NavLink className="site-menuitem site-subitem" to="/form">Form 表单
                       <div className="site-menuitemend"></div>
                       </NavLink> 
                     </li>
@@ -98,7 +98,7 @@ ReactDOM.render(
           <Route path="/icon" component={IconPage}/>
           <Route path="/button" component={ButtonExample}/>
           <Route path="/dialog" component={DialogExample}/>
-          <Route path="/layout" component={LayoutExample}/>
+          <Route path="/layout" component={LayoutPage}/>
           <Route path="/form" component={FormExample}/>
         </Content>
       </Layout>
