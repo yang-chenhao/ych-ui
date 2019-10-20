@@ -8563,3 +8563,12 @@ yargs@^7.0.0:
     which-module "^1.0.0"
     y18n "^3.2.1"
     yargs-parser "^5.0.0"
+
+yui-react@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.npmjs.org/yui-react/-/yui-react-0.0.7.tgz#62e4650b9a7763f3c785fedda6ad42b51ce64da4"
+  integrity sha512-QrFoK6Dv6lVMO8GqgXbrM2RSnXixpjSvIz4IcnH0Hn5/onBbz7a9VBfgx4JmYlICiDX/tQyDUZ7a/hNVnovPVA==
+  dependencies:
+    react "^16.8.6"
+    react-dom "^16.8.6"
+    react-router-dom "^5.0.1"
