@@ -3,6 +3,7 @@ import './dialog.scss'
 import { Icon } from '../index'
 import ReactDOM from 'react-dom';
 import { scopedClassMaker } from '../helpers/classes';
+import Button from './../button/button';
 
 interface Props {
     visible: boolean,
@@ -30,7 +31,7 @@ const Dialog: React.FunctionComponent<Props> = (props) => {
                     <Icon name='close' onClick={onClickClose} />
                 </div>
                 <header className={sc('header')}>
-                    提示
+                    Basic Modal 
                 </header>
                 <main className={sc('main')}>
                     {props.children}
@@ -54,8 +55,8 @@ Dialog.defaultProps = {
     closeOnClickMask: false
 }
 
-const alert = (content: string) => {
-    const button = <button onClick={() => close()}>ok</button>
+const alert = (content: ReactNode) => {
+    const button = <Button level='important' onClick={() => close()}>{'知道了'}</Button>
     const close = modal(content, [button])
 }
 
@@ -78,7 +79,7 @@ const modal = (content: ReactNode, buttons?: Array<ReactElement>, afterClose?: (
     ReactDOM.render(component, div)
     return close
 }
-const confirm = (content: string, yes?: () => void, no?: () => void) => {
+const confirm = (content: ReactNode, yes?: () => void, no?: () => void) => {
     const onYes = () => {
         close()
         yes && yes()
@@ -87,7 +88,7 @@ const confirm = (content: string, yes?: () => void, no?: () => void) => {
         close()
         no && no()
     }
-    const buttons = [<button onClick={onYes}>yes</button>, <button onClick={onNo}>no</button>]
+    const buttons = [<Button onClick={onYes}>取消</Button>, <Button level='important' onClick={onNo}>确定</Button>]
     const close = modal(content, buttons, no)
 }
 

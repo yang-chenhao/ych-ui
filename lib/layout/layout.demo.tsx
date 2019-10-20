@@ -7,8 +7,8 @@ const LayoutDemo = () => {
     <Fragment>
       <Demo 
         code={require('!!raw-loader!./layout.example.tsx').default}
-        title={'Icon图标'}
-        description={'使用 yui-react Icon图标。'}
+        title={'基本结构'}
+        description={'典型的页面布局'}
       >
         <LayoutExample /> 
       </Demo> 
