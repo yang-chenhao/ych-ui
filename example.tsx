@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {HashRouter as Router, Route, NavLink} from 'react-router-dom';
 import ButtonExample from './lib/button.example';
-import FormExample from './lib/form/form.example';
 import {Layout, Aside, Header, Content, Footer} from './lib/layout/layout';
 import Icon from './lib/icon/icon';
 import './example.scss';
@@ -11,6 +10,7 @@ import StartPage from './site_page/start/start';
 import IconPage from './site_page/iconPage/iconPage';
 import LayoutPage from './site_page/layoutPage/layoutPage';
 import DialogPage from './site_page/dialogPage/dialogPage';
+import FormPage from './site_page/formPage/formPage';
 
 
 const logo = require('./logo.png');
@@ -99,7 +99,7 @@ ReactDOM.render(
           <Route path="/button" component={ButtonExample}/>
           <Route path="/dialog" component={DialogPage}/>
           <Route path="/layout" component={LayoutPage}/>
-          <Route path="/form" component={FormExample}/>
+          <Route path="/form" component={FormPage}/>
         </Content>
       </Layout>
       <Footer className="site-footer">
