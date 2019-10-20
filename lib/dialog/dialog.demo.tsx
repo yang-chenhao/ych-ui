@@ -1,7 +1,7 @@
 import React, {Fragment} from 'react';
 import Demo from './../../site_page/demo/demo';
 import DialogExample from './dialog_example/dialog.example'
-import AlertExample from './dialog_example/Alert.example';
+import AlertExample from './dialog_example/alert.example';
 import ConfirmExample from './dialog_example/confirm.example';
 import OpenModalExample from './dialog_example/openModal.example';
 
