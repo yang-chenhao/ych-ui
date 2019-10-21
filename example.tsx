@@ -33,7 +33,7 @@ ReactDOM.render(
         <Aside className="site-aside">
           <ul className="site-menu">
             <li>
-              <NavLink className="site-menuitem" to="/index">Yui-react
+              <NavLink className="site-menuitem" to="/introduction">Yui-react
               <div className="site-menuitemend"></div>
               </NavLink>
             </li>
@@ -93,7 +93,7 @@ ReactDOM.render(
           </ul>
         </Aside>
         <Content className="site-main">
-          <Route path="/index" component={IntroPage}/>
+          <Route path="/introduction" component={IntroPage}/>
           <Route path="/start" component={StartPage}/>
           <Route path="/icon" component={IconPage}/>
           <Route path="/button" component={ButtonExample}/>
