@@ -8582,3 +8582,13 @@ yui-react@^0.0.8:
     react-dom "^16.8.6"
     react-router-dom "^5.0.1"
     yui-react "^0.0.7"
+
+yui-react@^0.0.9:
+  version "0.0.9"
+  resolved "https://registry.npmjs.org/yui-react/-/yui-react-0.0.9.tgz#3b412b9ee5b49b94cecfbab3a61d2f4154d96803"
+  integrity sha512-QDBUWh3M6IMkYNjjZqtQyqJOWt9CPv3zwK5B0lMn/Rt98Z//bFQ9sOH7rvssxlOy8mseivYTHFgYSypS3JM/NQ==
+  dependencies:
+    react "^16.8.6"
+    react-dom "^16.8.6"
+    react-router-dom "^5.0.1"
+    yui-react "^0.0.8"

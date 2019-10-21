@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
-import Dialog from '../dialog'
-import Button from './../../button/button';
-
+import { Dialog, Button } from 'yui-react'
 
 const DialogExample: React.FunctionComponent = () => {
     const [x, setX] = useState(false)

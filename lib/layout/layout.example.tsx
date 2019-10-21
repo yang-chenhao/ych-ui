@@ -1,9 +1,5 @@
 import React from 'react'
-import { Layout } from 'yui-react'
-import Content from './content'
-import Footer from './footer'
-import Aside from './aside'
-import Header from './header'
+import { Layout, Content, Header, Footer, Aside } from 'yui-react'
 import './layout.example.scss'
 
 
