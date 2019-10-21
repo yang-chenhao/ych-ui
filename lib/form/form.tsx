@@ -79,3 +79,5 @@ Form.defaultProps = {
 }
 
 export default Form
+export { Form } 
+export { default as Validator } from './validator'
