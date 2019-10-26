@@ -27,4 +27,14 @@
       border-color: lighten($main-color, 10%);
     }
   }
+  &-danger {
+    color: #fff;
+    background-color: #ff4d4f;
+    border: 1px solid #ff4d4f;
+    &:hover,
+    &:focus {
+      background-color: lighten(#ff4d4f, 10%);
+      border-color: lighten(#ff4d4f, 10%);
+    }
+  }
 }

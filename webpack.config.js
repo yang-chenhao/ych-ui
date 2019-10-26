@@ -8,7 +8,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist/lib'),
-    library: 'FUI',
+    library: 'Yui-react',
     libraryTarget: 'umd',
   },
   module: {

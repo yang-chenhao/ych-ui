@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {HashRouter as Router, Route, NavLink} from 'react-router-dom';
-import ButtonExample from './lib/button.example';
 import {Layout, Aside, Header, Content, Footer} from './lib/layout/layout';
 import Icon from './lib/icon/icon';
 import './example.scss';
@@ -11,6 +10,7 @@ import IconPage from './site_page/iconPage/iconPage';
 import LayoutPage from './site_page/layoutPage/layoutPage';
 import DialogPage from './site_page/dialogPage/dialogPage';
 import FormPage from './site_page/formPage/formPage';
+import ButtonPage from './site_page/buttonPage/buttonPage';
 
 
 const logo = require('./logo.png');
@@ -50,6 +50,12 @@ ReactDOM.render(
                 <li>
                   <div className="site-submenutitle">通用</div>
                   <ul>
+                    <li>
+                      <NavLink className="site-menuitem site-subitem" to="/button">
+                        Button 按钮 
+                      <div className="site-menuitemend"></div>
+                      </NavLink> 
+                    </li>
                     <li>
                       <NavLink className="site-menuitem site-subitem" to="/icon">
                         Icon 图标
@@ -95,8 +101,8 @@ ReactDOM.render(
         <Content className="site-main">
           <Route path="/introduction" component={IntroPage}/>
           <Route path="/start" component={StartPage}/>
+          <Route path="/button" component={ButtonPage}/>
           <Route path="/icon" component={IconPage}/>
-          <Route path="/button" component={ButtonExample}/>
           <Route path="/dialog" component={DialogPage}/>
           <Route path="/layout" component={LayoutPage}/>
           <Route path="/form" component={FormPage}/>
