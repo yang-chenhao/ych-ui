@@ -30,16 +30,15 @@
   }
   &-close {
     position: absolute;
-    bottom: 100%;
-    left: 100%;
-    background: $main-color;
+    right: -16px;
+    top: -16px;
     width: 2em;
     height: 2em;
-    border-radius: 50%;
     transform: translate(-50%, 50%);
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: black;
+    cursor: pointer;
   }
 }

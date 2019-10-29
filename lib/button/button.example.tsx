@@ -1,5 +1,6 @@
 import React from 'react'
-import { Button } from 'yui-react';
+// import { Button } from 'yui-react';
+import Button from './button'
 
 const ButtonEample: React.FunctionComponent = () => {
     return (

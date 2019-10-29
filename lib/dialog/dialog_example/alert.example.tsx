@@ -1,6 +1,7 @@
 import React from 'react'
 import { alert } from './../dialog'
-import { Button } from 'yui-react'
+import Button from './../../button/button'
+// import { Button } from 'yui-react'
 
 const AlertExample: React.FunctionComponent = () => {
     return (

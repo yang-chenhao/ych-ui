@@ -1,6 +1,7 @@
 import React from 'react'
 import { confirm } from './../dialog'
-import { Button } from 'yui-react'
+// import { Button } from 'yui-react'
+import Button from './../../button/button'
 
 const ConfirmExample: React.FunctionComponent = () => {
     return (

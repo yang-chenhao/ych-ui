@@ -1,5 +1,7 @@
 import React from 'react'
-import { Icon } from 'yui-react'
+import Icon from './icon';
+// import { Icon } from 'yui-react'
+
 
 const IconExample: React.FunctionComponent = () => {
     return (

@@ -1,6 +1,8 @@
 import React from 'react'
-import { Layout, Content, Header, Footer, Aside } from 'yui-react'
+// import { Layout, Content, Header, Footer, Aside } from 'yui-react'
 import './layout.example.scss'
+import Layout, { Header, Content, Footer, Aside } from './layout';
+
 
 
 export default function () {

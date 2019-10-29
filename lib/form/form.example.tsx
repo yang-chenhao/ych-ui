@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Form, Validator, Button } from 'yui-react'
-import { FormValue } from './form';
+// import { Form, Validator, Button } from 'yui-react'
+import Form, { FormValue, Validator } from './form';
+import Button from './../button/button'
 
 const usernames = ['frank', 'jack', 'alice', 'bob']
 const checkUserName = (username: string, succeed: () => void, fail: () => void) => {
